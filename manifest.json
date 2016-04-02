@@ -1,21 +1,19 @@
 {
-  "background": {
-    "persistent": false,
-    "page": "background.html"
-  },
-  "browser_action": {
-    "default_icon": "NU.png"
-  },
-  "default_locale": "en",
-  "description": "Check your blackboard grades without actually going to blackboard",
-  "icons": {
-    "128": "NU.png"
-  },
-  "name": "Grade Getter",
-  "permissions": [
-    "webNavigation",
-    "*://*.google.com/"
-   ],
-  "version": "1.0",
-  "manifest_version": 2
+    "name": "Grade Getter",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Check your blackboard grades without actually going to blackboard",
+    "icons": {
+        "128": "NU.png"
+      },
+
+    "background": {
+      "scripts": ["background.js"]
+    },
+
+    "browser_action": {
+        "default_title": "That's the tool tip",
+        "default_icon": "NU.png",
+        "default_popup": "popup.html"
+    }
 }
