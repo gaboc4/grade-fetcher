@@ -6,7 +6,14 @@ var app     = express();
 
 app.get('/scrape', function(req, res){
 
-  //All the web scraping magic will happen here
+  var username = 'duffy.tr';
+  var password = '********';
+  
+  url = "https://neuidmsso.neu.edu/cas-server/login?service=https%3A%2F%2Fneuidmsso.neu.edu%2Fidp%2FAuthn%2FCas%2FNoForceAuthn";
+  
+  url.getElementByID('username').value = username;
+  
+  url.forms[0].submit()
 
 })
 
