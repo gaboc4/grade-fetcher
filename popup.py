@@ -10,14 +10,14 @@ timer = 60
 browser = RoboBrowser(parser='lxml')
 
 # Open Facebook login page
-browser.open('https://m.facebook.com/login')
+browser.open('https://neuidmsso.neu.edu/cas-server/login?service=https%3A%2F%2Fneuidmsso.neu.edu%2Fidp%2FAuthn%2FCas%2FNoForceAuthn')
 
 # Grab the login form
 form = browser.get_forms()[0]
 
 # Get email and password from user
-form['email'].value = str(input("Email: "))
-form['pass'].value = str(getpass.getpass())
+form['username'].value = str(input("Email: "))
+form['password'].value = str(getpass.getpass())
 
 # Submit login form
 browser.submit_form(form)
