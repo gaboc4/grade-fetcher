@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/python
 
 import getpass
 from robobrowser import RoboBrowser
@@ -7,9 +7,7 @@ import time
 timer = 60
 
 # Open the browser
-browser = RoboBrowser(user_agent='Mozilla/5.0 (Windows NT 6.1; WOW64)'
-                      'AppleWebKit/537.36 (KHTML, like Gecko)'
-                      'Chrome/45.0.2454.93 Safari/537.36', parser='lxml')
+browser = RoboBrowser(parser='lxml')
 
 # Open Facebook login page
 browser.open('https://m.facebook.com/login')
