@@ -18,8 +18,15 @@ casper.start('http://blackboard.neu.edu', function() {
 
 casper.thenOpen('http://blackboard.neu.edu/webapps/streamViewer/streamViewer?cmd=view&streamName=mygrades_d', function() {
     this.echo("hit grade page");
-    grades = document.querySelectorAll(".grade-value");
-    this.echo(grades.toString());
+    grades = document.querySelectorAll("grade-value");
+//    var div_array = Array.prototype.slice.call(grades); // converts NodeList to Array
+    this.echo(grades.length);
+    var stuffweneed = [];
+    var i = 0;
+    for (; i < 6; i++) {
+        this.echo(div_array[i]);
+    }
+
 });
 
 function getGrades() {
