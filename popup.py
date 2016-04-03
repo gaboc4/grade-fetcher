@@ -1,6 +1,10 @@
 #!/usr/bin/python
-
+try:
+    from http.cookiejar import CookieJar
+except ImportError:
+    from cookielib import CookieJar
 import getpass
+import urllib2
 from robobrowser import RoboBrowser
 import time
 
@@ -20,10 +24,6 @@ print(browser.get_forms()[0])
 # Get email and password from user
 form['username'].value = str(raw_input("Username:"))
 form['password'].value = str(getpass.getpass())
-
-# form['username'].value = str("duffy.tr")
-# form['password'].value = str("higabe")
-
 
 
 # Submit login form
