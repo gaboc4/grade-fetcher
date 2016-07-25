@@ -9,8 +9,8 @@ page = agent.get('https://neuidmsso.neu.edu/cas-server/login?service=https%3A%2F
 
 form = page.forms.first
 
-form['username'] = 'centeno.g'
-form['password'] = 'Foohy623'
+form['username'] = 
+form['password'] = 
 page = form.submit
 
 puts page.body
